@@ -4,7 +4,7 @@ const router = express.Router();
 
 const staticController = require("../controllers/staticController");
 
-app.use("/", (req, res, next) => {
+router.get("/", (req, res, next) => {
     res.send("Welcome to Bloccit")
   });
 
