@@ -14,5 +14,62 @@ module.exports = {
         .catch((err) => {
             callback(err);
         })
+    },
+
+    getTopic(id, callback){
+        // sequelize method to find specific element by id
+        return Topic.findById(id)
+        .then((topic) => {
+            callback(null, topic);
+        })
+        .catch((err) => {
+            callback(err);
+        })
+    },
+
+    addTopic(newTopic, callback){
+        // sequelize's method to create a new instance
+        return Topic.create({
+            title: newTopic.title,
+            description: newTopic.description
+        })
+        .then((topic) => {
+            callback(null, topic);
+        })
+        .catch((err) => {
+            callback(err);
+        })
+    },
+
+    deleteTopic(id, callback){
+        return Topic.destroy({
+            where: {id}
+        })
+        .then((topic) => {
+            callback(null, topic);
+        })
+        .catch((err) => {
+            callback(err);
+        })
+    },
+
+    updateTopic(id, updatedTopic, callback){
+        return Topic.findById(id)
+        .then((topic) => {
+            if(!topic){
+                return callback("Topic not found");
+            }
+
+            topic.update(updatedTopic, {
+                // passing array of keys to the fields property
+                fields: Object.keys(updatedTopic)
+            })
+            .then(() => {
+                callback(null, topic);
+            })
+            .catch((err) => {
+                callback(err);
+            });
+        });
     }
 }

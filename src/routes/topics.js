@@ -3,6 +3,20 @@ const router = express.Router();
 
 const topicController = require("../controllers/topicController")
 
+//if the topics route is selected, return index function from controller
 router.get("/topics", topicController.index);
+
+//if the topics/new route is selected, return new function from controller
+router.get("/topics/new", topicController.new);
+
+router.post("/topics/create", topicController.create);
+
+router.get("/topics/:id", topicController.show);
+
+router.post("/topics/:id/destroy", topicController.destroy);
+
+router.get("/topics/:id/edit", topicController.edit);
+
+router.post("/topics/:id/update", topicController.update);
 
 module.exports = router;
