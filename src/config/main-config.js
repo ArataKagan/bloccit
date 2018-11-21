@@ -1,3 +1,4 @@
+//allow us to handle environment variables
 require("dotenv").config();
 const path = require("path");
 // joins the views directory into one path

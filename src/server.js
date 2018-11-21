@@ -1,3 +1,5 @@
+// Function as a Node server
+
 const app = require("./app");
 const http = require("http");
 

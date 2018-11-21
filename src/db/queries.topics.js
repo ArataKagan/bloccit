@@ -1,3 +1,4 @@
+//abstract CRUD operations into this file
 // inside models folder, there is topic
 const Topic = require("./models").Topic;
 

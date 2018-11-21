@@ -1,3 +1,6 @@
+// Define static routers in this file
+// import Express router instance and get matching route path 
+
 const app = require("../app");
 const express = require("express");
 //instantiate router 
