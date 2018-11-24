@@ -1,6 +1,7 @@
 //abstract CRUD operations into this file
-// inside models folder, there is topic
+// inside models folder, there is topic and post
 const Topic = require("./models").Topic;
+const Post = require("./models").Post;
 
 
 module.exports = {
@@ -19,7 +20,13 @@ module.exports = {
 
     getTopic(id, callback){
         // sequelize method to find specific element by id
-        return Topic.findById(id)
+        return Topic.findById(id, {
+            //include enables 'eager load' all associated posts
+            include: [{
+                model: Post,
+                as: "posts"
+            }]
+        })
         .then((topic) => {
             callback(null, topic);
         })
