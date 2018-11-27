@@ -2,7 +2,7 @@
 // inside models folder, there is topic and post
 const Topic = require("./models").Topic;
 const Post = require("./models").Post;
-
+const Flair = require("./models").Flair;
 
 module.exports = {
     // function retun the result of calling all the topics
@@ -25,6 +25,9 @@ module.exports = {
             include: [{
                 model: Post,
                 as: "posts"
+            }, {
+                model: Flair,
+                as: "flairs"
             }]
         })
         .then((topic) => {
