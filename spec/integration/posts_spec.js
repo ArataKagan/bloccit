@@ -20,7 +20,7 @@ describe("routes : posts", () => {
                 this.topic = topic;
 
                 Post.create({
-                    title: "Snowball Fighting",
+                    title: "Snowman Building Competition",
                     body: "So much snow!",
                     topicId: this.topic.id
                 })
@@ -80,7 +80,7 @@ describe("routes : posts", () => {
         it("should render a view with the selected post", (done) => {
             request.get(`${base}/${this.topic.id}/posts/${this.post.id}`, (err, res, body) => {
                 expect(err).toBeNull();
-                expect(body).toContain("Snowball Fighting");
+                expect(body).toContain("So much snow!");
                 done();
             });
         });
@@ -107,7 +107,7 @@ describe("routes : posts", () => {
             request.get(`${base}/${this.topic.id}/posts/${this.post.id}/edit`, (err, res, body) => {
                 expect(err).toBeNull();
                 expect(body).toContain("Edit Post");
-                expect(body).toContain("Snowball Fighting");
+                expect(body).toContain("Snowman Building Competition");
                 done();
             });
         });
@@ -151,5 +151,33 @@ describe("routes : posts", () => {
         });
 
     });
+
+     it("should not create a new post that fails validations", (done) => {
+       const options = {
+         url: `${base}/${this.topic.id}/posts/create`,
+         form: {
+
+//#1
+           title: "a",
+           body: "b"
+         }
+       };
+
+       request.post(options,
+         (err, res, body) => {
+
+//#2
+           Post.findOne({where: {title: "a"}})
+           .then((post) => {
+               expect(post).toBeNull();
+               done();
+           })
+           .catch((err) => {
+             console.log(err);
+             done();
+           });
+         }
+       );
+     });
 
 });
