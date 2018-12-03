@@ -48,6 +48,8 @@ module.exports = {
     edit(req, res, next){
         postQueries.getPost(req.params.id, (err, post) => {
             if(err || post == null){
+                msg = err ? `ERROR: ${JSON.stringify(err)}` : `PostId '${req.params.id}' not found!`;
+                console.log(msg);
                 res.redirect(404, "/");
             } else {
                 const authorized = new Authorizer(req.user, post).edit();
@@ -64,6 +66,8 @@ module.exports = {
     destroy(req, res, next){
         postQueries.deletePost(req, (err, deletedRecordsCount) => {
             if(err){
+                console.log("There was an error while deleting a post.");
+                console.log(err);
                 req.flash('notice', 'You are not authorized to do that.')
                 res.redirect(500, `/topics/${req.params.topicId}/posts/${req.params.id}`)
             } else {

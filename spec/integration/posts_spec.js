@@ -258,7 +258,7 @@ describe("routes : posts", () => {
         it("should delete the post with the associated ID", (done) => {
             expect(this.post.id).toBe(1);
             request.post(`${base}/${this.topic.id}/posts/${this.post.id}/destroy`, (err, res, body) => {
-
+                console.log(err);
                 Post.findById(1)
                 .then((post) => {
                     expect(err).toBeNull();
@@ -378,7 +378,6 @@ describe("routes : posts", () => {
                         done();
                     })
                     .catch((err) => {
-                        console.log(err);
                         done();
                     });
                     }
@@ -428,7 +427,7 @@ describe("routes : posts", () => {
             it("should delete the post with the associated ID", (done) => {
                 expect(this.post.id).toBe(1);
                 request.post(`${base}/${this.topic.id}/posts/${this.post.id}/destroy`, (err, res, body) => {
-
+                    console.log(err);
                     Post.findById(1)
                     .then((post) => {
                         expect(err).toBeNull();
@@ -441,7 +440,7 @@ describe("routes : posts", () => {
 
         describe("GET /topics/:topicId/posts/:id/edit", () => {
 
-            it("should not render a view with an edit post form", (done) => {
+            it("should render a view with an edit post form", (done) => {
                 request.get(`${base}/${this.topic.id}/posts/${this.post.id}/edit`, (err, res, body) => {
                     expect(err).toBeNull();
                     expect(body).toContain("Edit Post");

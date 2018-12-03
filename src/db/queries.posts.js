@@ -14,6 +14,7 @@ module.exports = {
     }, 
 
     getPost(id, callback){
+        console.log(id);
         return Post.findById(id)
         .then((post) => {
             callback(null, post);
