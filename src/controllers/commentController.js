@@ -15,8 +15,9 @@ module.exports = {
             commentQueries.createComment(newComment, (err, comment) => {
                 if(err){
                     req.flash("error", err);
+                } else {
+                    res.redirect(req.headers.referer);
                 }
-                res.redirect(req.headers.referer);
             });
         } else {
             req.flash("notice", "You must be signed in to do that.");
@@ -33,4 +34,4 @@ module.exports = {
             }
         });
     }
-}
+};
