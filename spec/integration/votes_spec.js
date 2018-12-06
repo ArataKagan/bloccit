@@ -49,7 +49,7 @@ describe("routes : votes", () => {
             });
         });
     });
-
+    // guest user 
     describe("guest attempting to vote on a post", () => {
         beforeEach((done) => { // before each suite in this context
             request.get({
@@ -89,7 +89,9 @@ describe("routes : votes", () => {
                 });
             });
         });
+        
 
+        // member user
         describe("signed in user voting on a post", () => {
             beforeEach((done) => {
                 request.get({
@@ -160,6 +162,36 @@ describe("routes : votes", () => {
                     });
                 });
 
+
+            describe("GET /topics/:topicId/posts/:postId/votes/upvote", () => {
+                it("should not allow to create a vote more than 1 vote on each post", (done) => {
+                    Post.findOne({
+                        where: {
+                            title: "My first visit to Proxima Centauri b"
+                        }
+                    })
+                    Vote.create({
+                        value: 1,
+                        postId: this.post.id,
+                        userId: this.user.id
+                    })
+                    .then(() => {
+                        Vote.create({
+                            value: 1,
+                            postId: this.post.id,
+                            userId: this.user.id
+                            });
+                        })
+                    .then((v) => {
+                        done();
+                    })
+                    .catch((err) => {
+                        expect(err.message).toContain("Only single vote is allowed");
+                    });
+                });
+            });
         });
+
+        
 });
 
