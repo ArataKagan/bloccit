@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: "userId",
       onDelete: "CASCADE"
     });
-    // associations can be defined here
   };
   return Vote;
 };

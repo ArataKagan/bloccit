@@ -102,6 +102,7 @@ describe("routes : users", () => {
             this.user;
             this.post;
             this.comment;
+            this.favorite;
 
             User.create({
                 email: "starman@tesla.com",
@@ -135,9 +136,11 @@ describe("routes : users", () => {
                     .then((res) => {
                         this.comment = res;
                         done();
-                    })
-                })
-            })
+                    });
+
+                    });
+                });
+            });
         });
 
         it("should present a list of comments and posts a user has created", (done) => {
@@ -147,7 +150,6 @@ describe("routes : users", () => {
                 done();
             });
         });
-    });
-
-
 });
+
+
