@@ -1,4 +1,4 @@
-#Melting Pot - Social Platform for Immigrants Setting In New Country
+# Melting Pot - Social Platform for Immigrants Setting In New Country
 
 ![Imgur](https://i.imgur.com/mIesIcQ.png)
 
