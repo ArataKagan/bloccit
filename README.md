@@ -33,3 +33,29 @@ Not only you can post your own topic, you can comment, upvote, and favorite othe
 - pg-hstore: 2.3.2,
 - Sequelize: 4.32.6,
 - Sequelize-cli: 5.3.0
+
+## Install 
+
+Run the following commands to install the app:
+
+```
+git clone https://github.com/ArataKagan/melting-pot
+cd melting-pot
+npm install
+``` 
+
+Run the following command to run the app in production: 
+
+```
+npm start
+```
+View the app running in production at http://localhost:3000 
+
+
+
+
+
+
+
+
+
