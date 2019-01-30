@@ -12,6 +12,7 @@ Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.co
 ## Table of Contents 
 
 - [Technologies](#technologies) 
+- [Running the test](#test)
 - [Setup](#install)
 
 ## Technologies 
@@ -34,6 +35,14 @@ Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.co
 - pg-hstore: 2.3.2,
 - Sequelize: 4.32.6,
 - Sequelize-cli: 5.3.0
+
+## test
+
+Run the following command to run the test 
+
+```
+npm test
+```
 
 ## Install 
 
