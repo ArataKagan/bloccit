@@ -36,7 +36,7 @@ Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.co
 - Sequelize: 4.32.6,
 - Sequelize-cli: 5.3.0
 
-## test
+## Test
 
 Run the following command to run the test 
 
