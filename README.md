@@ -5,7 +5,7 @@
 
 
 
-Melting Pot is a Node-based social platform for newly immigrants to create their own topic, post, comment and share with other users. The users are also allowed to upvote and favorite other people's posts. PostgreSQL is used for the database and EJS is used for the view engine. Stying is mainly handled by Twitter Bootstrap.
+Melting Pot is a Node-based social platform for newly immigrants to create their own topic, post, comment and share with other users. The users are also allowed to upvote and favorite other people's posts. PostgreSQL is used for the database and EJS is used for the view engine. User authentication is handled by Passport local strategy. Twitter Bootstrap is used for styling.
 
 Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.com/)
 
@@ -52,8 +52,6 @@ Run the following command to run the app in production:
 npm start
 ```
 View the app running in production in your browser at http://localhost:3000 
-
-
 
 
 
