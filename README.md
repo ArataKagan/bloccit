@@ -5,7 +5,7 @@
 
 
 
-Melting Pot is a Node-based CRUD application mainly for newly immigrants to create their own topic, post, comment and share with other users regarding various topics setting into a new country. Users are allowed to upvote and favorite other people's posts. PostgreSQL is used for the database and EJS is used for the view engine. User authentication is handled by Passport local strategy. Twitter Bootstrap is used for styling.
+Melting Pot is a Node-based CRUD application mainly for newly immigrants to create their own topic, post, comment and share with other users regarding various topics. Users are allowed to upvote and favorite other people's posts. PostgreSQL is used for the database and EJS is used for the view engine. User authentication is handled by Passport local strategy. Twitter Bootstrap is used for styling.
 
 Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.com/)
 
@@ -13,7 +13,6 @@ Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.co
 
 - [Technologies](#technologies) 
 - [Setup](#install)
-- Status
 
 ## Technologies 
 
