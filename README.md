@@ -1,16 +1,18 @@
-# Melting Pot - Social Platform for Immigrants Setting In New Country
+# Melting Pot 
 
 ![Imgur](https://i.imgur.com/mIesIcQ.png)
 
 
 
-Melting Pot is a social platform for newly immigrants to post, comment and share with other immigrants. 
-Not only you can post your own topic, you can comment, upvote, and favorite other people's posts. 
+
+Melting Pot is a Node-based social platform for newly immigrants to create their own topic, post, comment and share with other users. The users are also allowed to upvote and favorite other people's posts. PostgreSQL is used for the database and EJS is used for the view engine. Stying is mainly handled by Twitter Bootstrap.
+
+Please see the live repo from [here](https://aratakagan-melting-pot.herokuapp.com/)
 
 ## Table of Contents 
 
 - [Technologies](#technologies) 
-- Setup
+- [Setup](#install)
 - Status
 
 ## Technologies 
@@ -22,8 +24,8 @@ Not only you can post your own topic, you can comment, upvote, and favorite othe
 - bcrypt.js 2.4.3,
 - body-parser 1.18.2,
 - dotenv: 5.0.0,
-- EJS: 2.5.7",
-- Express: 4.16.2",
+- EJS: 2.5.7,
+- Express: 4.16.2,
 - Express-flash: 0.0.2,
 - Express-session: 1.15.6,
 - Express-validator: 5.0.2,
@@ -49,7 +51,8 @@ Run the following command to run the app in production:
 ```
 npm start
 ```
-View the app running in production at http://localhost:3000 
+View the app running in production in your browser at http://localhost:3000 
+
 
 
 
