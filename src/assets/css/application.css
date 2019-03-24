@@ -1,15 +1,45 @@
 body {
     padding-top: 54px;
-    background-color: #DCDCDC;
+    background-color: #5C60B2;
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
+}
+
+main {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .col-lg-4 {
     color: SlateGray;
 }
 
-.jumbotron my-4 {
-    background-color:transparent !important;
-    font-style: "Times New Roman", Times, serif;
+header {
+    height: 50vh;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  height: 50vh;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: white;
+}
+
+.splash {
+    background: #FFF6E5;
+	padding-bottom: 2em;
+}
+
+#landing-image {
+    background-image: url('computer-mock.png');
+}
+
+img {
+    width: 300px;
+    
 }
