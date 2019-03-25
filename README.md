@@ -1,6 +1,6 @@
 # Melting Pot 
 
-![Imgur](https://i.imgur.com/mIesIcQ.png)
+![Imgur](https://i.imgur.com/vlVI8lp.png)
 
 
 
