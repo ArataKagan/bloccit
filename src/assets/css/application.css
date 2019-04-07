@@ -84,7 +84,6 @@ header {
 img {
     padding-top: 50px;
     width: 500px;
-    
 }
 
 #comment-icon {
@@ -97,3 +96,32 @@ img {
     background-color: white;
     padding-top: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+    .full-width {
+        height: 100vh;
+    }
+    header {
+        height: 100vh;
+    }
+    .header-row {
+        flex-direction: column-reverse;
+    }
+  }
+
+  @media screen and (max-width: 565px) {
+    img {
+        width: 400px;
+    }
+    .full-width {
+        height: 100vh;
+    }
+    header {
+        height: 100vh;
+    }
+    .header-row {
+        flex-direction: column-reverse;
+    }
+  }
+
+ 
