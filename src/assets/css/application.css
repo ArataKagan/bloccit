@@ -97,6 +97,11 @@ img {
     padding-top: 10px;
 }
 
+#topic-list {
+    margin-top: 20px;
+}
+
+
 @media screen and (max-width: 1000px) {
     .full-width {
         height: 100vh;
